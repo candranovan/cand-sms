@@ -28,10 +28,7 @@ data = {
 }
 
 send = s.post("http://sms.payuterus.biz/alpha/send.php", headers=headers, data=data).text
-
-if 'SMS Gratis Telah Dikirim' in send
-        print("SMS SUCCES  TERKIRIM")
-elif 'MAAF....!' in send:
+if 'MAAF....!' in send:
 	print("\n  [ Mohon tunggu 15 menit untuk mengirim pesan yg sama ]\n")
 else:
 	print("\n  [ Pengiriman gagal ]\n")
